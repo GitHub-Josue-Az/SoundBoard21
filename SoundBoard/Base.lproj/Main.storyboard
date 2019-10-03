@@ -33,7 +33,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="aHl-eh-hPp">
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="Kfr-ia-VPH"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="Kfr-ia-VPH">
+                            <connections>
+                                <segue destination="wgu-Tr-dbT" kind="show" id="1MB-Ze-siR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -67,14 +71,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcU-VU-uFe">
-                                <rect key="frame" x="182.5" y="64" width="49" height="30"/>
+                                <rect key="frame" x="182.5" y="108" width="49" height="30"/>
                                 <state key="normal" title="Record"/>
                                 <connections>
                                     <action selector="recordTapped:" destination="wgu-Tr-dbT" eventType="touchUpInside" id="o4I-1e-ICa"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sound Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="can-yO-VDz">
-                                <rect key="frame" x="107" y="164" width="200" height="30"/>
+                                <rect key="frame" x="107" y="208" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="ZK5-Jg-wM4"/>
                                 </constraints>
@@ -83,14 +87,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHr-YT-uag">
-                                <rect key="frame" x="192" y="114" width="30" height="30"/>
+                                <rect key="frame" x="192" y="158" width="30" height="30"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="playTapped:" destination="wgu-Tr-dbT" eventType="touchUpInside" id="EKk-fE-RPO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjN-jk-bRJ">
-                                <rect key="frame" x="192" y="214" width="30" height="30"/>
+                                <rect key="frame" x="192" y="258" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addTapped:" destination="wgu-Tr-dbT" eventType="touchUpInside" id="Jim-Em-Ygq"/>
@@ -111,7 +115,9 @@
                         <viewLayoutGuide key="safeArea" id="nux-Xz-Ki1"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="qjN-jk-bRJ" id="XvT-yk-HJB"/>
                         <outlet property="nameTextField" destination="can-yO-VDz" id="49A-za-b7S"/>
+                        <outlet property="playButton" destination="MHr-YT-uag" id="KyL-bF-Z2S"/>
                         <outlet property="recordButton" destination="RcU-VU-uFe" id="gxZ-2s-FdG"/>
                     </connections>
                 </viewController>
